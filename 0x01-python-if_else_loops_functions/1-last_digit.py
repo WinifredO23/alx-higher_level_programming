@@ -8,6 +8,6 @@ if number < 0:
 if digit > 5:
     print("Last digit of 98 is 8 and is greater than 5")
 elif digit == 0:
-    print("0")
+    print("Last digit of 0 is 0 and is 0")
 else:
     print("less than 6 and not 0")
