@@ -1,0 +1,85 @@
+=============================
+How to Use 101-lazy_matrix_mul.py
+=============================
+
+This module defines a matrix multiplication function called "lazy_matrix_mul(m_a, m_b)" using the NumPy library.
+
+Usage
+=====
+
+The function "lazy_matrix_mul" is used to multiply two matrices using NumPy. It takes two parameters:
+- m_a (list of lists of ints/floats): The first matrix.
+- m_b (list of lists of ints/floats): The second matrix.
+
+The function returns the result of matrix multiplication using NumPy's `np.matmul` function.
+
+Test Cases
+==========
+
+Positive Test Cases:
+
+1. Test the multiplication of two valid matrices with integer values.
+```python
+>>> from 101-lazy_matrix_mul import lazy_matrix_mul
+>>> m_a = [[1, 2], [3, 4]]
+>>> m_b = [[1, 2], [3, 4]]
+>>> result = lazy_matrix_mul(m_a, m_b)
+>>> result
+[[7, 10], [15, 22]]
+
+    Test the multiplication of two valid matrices with float values.
+
+```python
+>>> m_a = [[1.2, 5.5, 6.2], [4.66, 12.3, -9.2]]
+>>> m_b = [[5.0, 3.3], [-2.9, 4.4], [7.2, 4.4]]
+>>> result = lazy_matrix_mul(m_a, m_b)
+>>> result
+[[34.69, 55.44], [-78.61, 29.018]]
+
+    Test the multiplication of two valid matrices with mixed integer and float values.
+
+```python
+>>> m_a = [[1, 2.5], [3.1, 4]]
+>>> m_b = [[1.2, 3.3], [4, 2.5]]
+>>> result = lazy_matrix_mul(m_a, m_b)
+>>> result
+[[9.2, 9.1], [16.52, 16.05]]
+
+    Test the multiplication of matrices with different sizes that should raise a ValueError exception.
+
+```python
+>>> m_a = [[1, 2], [3, 4]]
+>>> m_b = [[1, 2], [2, 3], [4, 5]]
+>>> result = lazy_matrix_mul(m_a, m_b)
+
+Negative Test Cases:
+
+    Test the function with inputs that are not lists of lists (e.g., strings or integers).
+
+```python
+>>> m_a = "not a list"
+>>> m_b = [[1, 2]]
+>>> result = lazy_matrix_mul(m_a, m_b)
+
+    Test the function with one of the input matrices being an empty list.
+
+```python
+>>> m_a = [[]]
+>>> m_b = [[5, 6], [7, 8]]
+>>> result = lazy_matrix_mul(m_a, m_b)
+
+    Test the function with matrices that have different-sized rows (e.g., one matrix with 2 rows and another with 3 rows).
+
+```python
+>>> m_a = [[1, 2], [3, 4]]
+>>> m_b = [[1, 2], [2, 3], [4, 5]]
+>>> result = lazy_matrix_mul(m_a, m_b)
+
+    Test the function with matrices that cannot be multiplied, such as a 2x3 matrix and a 4x2 matrix.
+
+```python
+>>> m_a = [[1, 2, 3], [4, 5, 6]]
+>>> m_b = [[1, 2], [3, 4]]
+>>> result = lazy_matrix_mul(m_a, m_b)
+
+Please note that this function uses NumPy for matrix multiplication, so ensure that NumPy is installed in your Python environment for the code to work correctly.

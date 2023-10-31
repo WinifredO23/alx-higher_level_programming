@@ -1,0 +1,38 @@
+=============================
+How to Use 100-matrix_mul.py
+=============================
+
+This module defines a matrix multiplication function called "matrix_mul(m_a, m_b)".
+
+Usage
+=====
+
+The function "matrix_mul" is used to multiply two matrices. It takes two parameters:
+- m_a (list of lists of ints/floats): The first matrix.
+- m_b (list of lists of ints/floats): The second matrix.
+
+The function will raise the following exceptions under the specified conditions:
+- TypeError: If either m_a or m_b is not a list of lists of ints/floats.
+- TypeError: If either m_a or m_b is empty.
+- TypeError: If either m_a or m_b has different-sized rows.
+- ValueError: If m_a and m_b cannot be multiplied.
+
+The function returns a new matrix representing the multiplication of m_a by m_b.
+
+
+Test Cases
+==========
+
+Positive Test Cases:
+1. Test the multiplication of two valid matrices with integer values.
+2. Test the multiplication of two valid matrices with float values.
+3. Test the multiplication of two valid matrices with mixed integer and float values.
+4. Test the multiplication of matrices with different sizes that should raise a ValueError exception.
+5. Test the multiplication of two matrices where one of them is a 1x1 matrix.
+6. Test the multiplication of two empty matrices to verify that it raises a TypeError exception as documented.
+
+Negative Test Cases:
+1. Test the function with inputs that are not lists of lists (e.g., strings or integers).
+2. Test the function with one of the input matrices being an empty list.
+3. Test the function with matrices that have different-sized rows (e.g., one matrix with 2 rows and another with 3 rows).
+4. Test the function with matrices that cannot be multiplied, such as a 2x3 matrix and a 4x2 matrix.

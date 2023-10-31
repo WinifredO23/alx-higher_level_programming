@@ -1,0 +1,21 @@
+=========================
+How to Use 3-say_my_name.py
+=========================
+
+This module defines a name-printing function called "say_my_name(first_name, last_name='')".
+
+Usage
+=====
+
+The function "say_my_name" is used to print a name with an optional last name.
+
+Examples:
+
+```python
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John")
+My name is John 
+
+>>> say_my_name("Alice", "Johnson")
+My name is Alice Johnson
+
